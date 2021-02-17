@@ -12,13 +12,6 @@
       "magento/framework": "102.0.*|103.0.*",
       "salecto2/magento2-admin-theme": "*"
   },
-  "minimum-stability": "dev",
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/vac19/Salecto_Advertisment"
-    }
-  ],
   "autoload": {
     "files": [
       "registration.php"
