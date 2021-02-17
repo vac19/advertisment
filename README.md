@@ -6,12 +6,12 @@ In front: Addes a menu item at top navigation and displays the Image and Title u
 
 Module Can be active/deactivete from configuration. 
 
-# Composer Install
+## Composer Install
 
 - `composer config repositories.reponame vcs https://github.com/vac19/advertisment`
 - `composer require salecto2/magento2-advertisment`
 
-# Composer Uninstall
+## Composer Uninstall
 
 - `composer remove salecto2/magento2-advertisment`
 
