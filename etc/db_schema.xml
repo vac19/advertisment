@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Salecto Advertisment "salecto_advert" Table Declarative Schema
+ * @category  Practice Task
+ * @package   Salecto_Advertisment
+ * @author    vashishtha
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="salecto_advert" resource="default" engine="innodb"
+           comment="Salecto Advertisment Backend Table">
+        <column xsi:type="smallint" name="ad_id" padding="10" identity="true" unsigned="true" nullable="false" comment="Advertisment Id"/>
+        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
+        <column xsi:type="varchar" name="ad_img" nullable="false" length="255" comment="Advertisment Image"/>
+        <column xsi:type="text" name="ad_description" nullable="false" comment="Advertisment Description"/>
+        <column xsi:type="datetime" name="from_date" comment="From Date"/>
+        <column xsi:type="datetime" name="to_date" comment="To Date"/>
+        <column xsi:type="varchar" name="ad_pages" nullable="false" length="255" comment="Advertisment Disaplay Pages"/>
+        <column xsi:type="smallint" name="ad_status" unsigned="true" nullable="false" default="0" comment="Advertisment Status"/>
+        <column xsi:type="datetime" name="created_at" comment="Advertisment Created"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="ad_id"/>
+        </constraint>
+    </table>
+</schema>
+

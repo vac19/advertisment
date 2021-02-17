@@ -1,0 +1,25 @@
+<?php
+/**
+ * template for render ui advertisment
+ * @category  Salecto
+ * @package   Salecto_Advertisment
+ * @author    Salecto
+ */
+$currentPage = $block->getRequest()->getFullActionName();
+$adverts = $block->getAdverts($currentPage);
+
+if(count($adverts) > 0): ?>
+	<div>
+			<?php 
+				foreach($adverts as $advert){
+					echo '<div style="float: left">';
+					echo '<div> <img src="'.$block->getMediaUrl($advert->getAdImg()).'"></div>';
+					echo "<div>" .$advert->getTitle(). "</div>";
+					//echo "<div>" .$advert->getAdDescription(). "</div>";
+					echo '</div>';
+				}
+			?>
+		</tr>
+	</div>
+
+<?php endif; ?>

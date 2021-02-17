@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Layout for display advertisments.
+ * @category Practice Module
+ * @package Salecto_Advertisment
+ * @author vashishtha 
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.top">
+            <block class="Salecto\Advertisment\Block\Adverts" name="salecto.adverts" template="Salecto_Advertisment::adverts.phtml" ifconfig="salecto_advertisment/general/enabled" after='-'/>
+        </referenceContainer>
+    </body>
+</page>

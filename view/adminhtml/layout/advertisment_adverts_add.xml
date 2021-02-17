@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Salecto Advertisment Ui Form Layout
+ * Advertisment Module ACL.
+ * @category  Practice Task
+ * @package   Salecto_Advertisment
+ * @author    vashishtha
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <body>
+        <referenceContainer name="content">
+            <uiComponent name="salecto_advert_form"/>
+        </referenceContainer>
+    </body>
+</page>

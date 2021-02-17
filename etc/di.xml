@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category  Salecto
+ * @package   Salecto\Advertisment
+ * @author    Salecto
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Salecto\Advertisment\Api\Data\GridInterface" type="Salecto\Advertisment\Model\GridModel" />
+
+    <virtualType name="Salecto\Advertisment\Model\ResourceModel\GridModel\GridModel\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">salecto_advert</argument>
+            <argument name="resourceModel" xsi:type="string">Salecto\Advertisment\Model\ResourceModel\GridModel</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="salecto_advert_list_data_source" xsi:type="string">Salecto\Advertisment\Model\ResourceModel\GridModel\GridModel\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Salecto\Advertisment\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Salecto\Advertisment\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">customLogHandler</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">Salecto\Advertisment\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Salecto\Advertisment\ReferenceImageUpload" type="Salecto\Advertisment\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">salecto/tmp/advertisment</argument>
+            <argument name="basePath" xsi:type="string">salecto/advertisment</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+            <argument name="allowedMimeTypes" xsi:type="array">
+                <item name="jpg" xsi:type="string">image/jpg</item>
+                <item name="jpeg" xsi:type="string">image/jpeg</item>
+                <item name="gif" xsi:type="string">image/gif</item>
+                <item name="png" xsi:type="string">image/png</item>
+            </argument> 
+        </arguments>
+    </virtualType>
+     
+    <type name="Salecto\Advertisment\Controller\Adminhtml\Adverts\Image\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Salecto\Advertisment\ReferenceImageUpload</argument>
+        </arguments>
+    </type>
+
+
+        <type name="Magento\Framework\Console\CommandList">
+            <arguments>
+                <argument name="commands" xsi:type="array">
+                    <item name="rfgen" xsi:type="object">Salecto\Advertisment\Console\RfGen</item>
+                    <item name="adverts" xsi:type="object">Salecto\Advertisment\Console\Adverts</item>
+                </argument>
+            </arguments>
+        </type>
+
+</config>

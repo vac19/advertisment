@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Salecto Advertisment "salecto_advert" Table Declarative Schema
+ * @category  Practice Task
+ * @package   Salecto_Advertisment
+ * @author    vashishtha
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+   <menu>
+       <add id="Salecto_Advertisment::advertisment"
+           title="Advertisment" module="Salecto_Advertisment"
+           sortOrder="110"
+           parent="Magento_Backend::content_elements"
+           action="advertisment/adverts"
+           resource="Magento_Backend::content"
+           />
+   </menu>
+</config>
