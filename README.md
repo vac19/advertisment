@@ -33,7 +33,7 @@ Desrcribe each settings from the backend, and what effect they have.
 ## Known issues
 
 - **After add/edit advertisment no advertisment/changes appear on frontend**\
-  It is require to clear catch each time when advertisment added or edited.
+  It is require to clear catch each time when advertisment added or edited ~ Locally.
 
 ## Developer informations
 
