@@ -61,6 +61,7 @@ class Adverts extends \Magento\Framework\View\Element\Template
 
     /**
      * Retrieve collection of 'advertisments', filtered with (from-to date, status and display on pages)
+     * @param string $page
      * @return array
      */
     public function getAdverts($page = null)
@@ -76,6 +77,11 @@ class Adverts extends \Magento\Framework\View\Element\Template
         return $collection;
     }
 
+    /**
+     * Creates Media Url + custom folder path + imageName.extension
+     * @param string $imgName
+     * @return string
+     */
     public function getMediaUrl($imgName)
     {
         $mediaUrl = $this->_storeManager->getStore()

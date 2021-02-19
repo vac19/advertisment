@@ -77,7 +77,7 @@ class Delete extends Action
 
     /**
      * Delete image from folder
-     *
+     * @param string $fileName
      * @return bool
      */
     public function deleteFile($fileName)

@@ -74,9 +74,9 @@ class AdvertMenu {
 
     /**
      * creates value array for '$menuNode'
-     * @return array
      * string $name (menu Text)
      * string $id (menu url)
+     * @return array
      */
     protected function getNodeAsArray($name, $id) {
         $url = $this->urlBuilder->getUrl($id);

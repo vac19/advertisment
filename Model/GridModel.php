@@ -58,7 +58,9 @@ class GridModel extends \Magento\Framework\Model\AbstractModel
 
     /**
      * Set EntityId.
-     * @return int
+     *
+     * @param int $entityId
+     * @return void
      */
     public function setEntityId($entityId)
     {
@@ -77,7 +79,9 @@ class GridModel extends \Magento\Framework\Model\AbstractModel
 
     /**
      * Set Title.
-     * @return varchar
+     *
+     * @param int $title
+     * @return void
      */
     public function setTitle($title)
     {
@@ -96,7 +100,9 @@ class GridModel extends \Magento\Framework\Model\AbstractModel
 
     /**
      * Set Content.
-     * @return varchar
+     *
+     * @param int $content
+     * @return void
      */
     public function setContent($content)
     {
@@ -115,7 +121,9 @@ class GridModel extends \Magento\Framework\Model\AbstractModel
 
     /**
      * Set PublishDate.
-     * @return datetime
+     *
+     * @param int $publishDate
+     * @return void
      */
     public function setPublishDate($publishDate)
     {
@@ -134,7 +142,9 @@ class GridModel extends \Magento\Framework\Model\AbstractModel
 
     /**
      * Set IsActive.
-     * @return bool
+     *
+     * @param int $isActive
+     * @return void
      */
     public function setIsActive($isActive)
     {
@@ -153,6 +163,9 @@ class GridModel extends \Magento\Framework\Model\AbstractModel
 
     /**
      * Set UpdateTime.
+     *
+     * @param int $updatetime
+     * @return void
      */
     public function setUpdateTime($updateTime)
     {
@@ -171,6 +184,9 @@ class GridModel extends \Magento\Framework\Model\AbstractModel
 
     /**
      * Set CreatedAt.
+     *
+     * @param int $createdAt
+     * @return void
      */
     public function setAdPages($createdAt)
     {
@@ -190,7 +206,9 @@ class GridModel extends \Magento\Framework\Model\AbstractModel
 
     /**
      * Set CreatedAt.
-     * @return datetime
+     *
+     * @param int $createdAt
+     * @return void
      */
     public function setCreatedAt($createdAt)
     {

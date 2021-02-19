@@ -27,4 +27,3 @@ class BackButton extends GenericButton implements ButtonProviderInterface
         ];
     }
 }
-

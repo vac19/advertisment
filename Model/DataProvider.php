@@ -86,7 +86,7 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 
     /**
      * creates media url along with advertisment image name and folder path.
-     *
+     * @param string $imgName
      * @return string
      */
     public function getMediaUrl($imgName)

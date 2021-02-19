@@ -76,6 +76,13 @@ class MassDelete extends \Magento\Backend\App\Action
         return $this->resultFactory->create(ResultFactory::TYPE_REDIRECT)->setPath('*/*/index');
     }
 
+    /**
+   * Execute the command
+   *
+   * @param string $fileName
+   * @throws \Exception
+   * @return bool
+   */
     public function deleteFile($fileName)
     {
         $path = 'salecto/advertisment/';

@@ -39,6 +39,7 @@ class GridModel extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 
     /**
      * Initialize resource model.
+     * @return object
      */
     protected function _construct()
     {

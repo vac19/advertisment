@@ -1,4 +1,10 @@
 <?php
+/**
+ * Ui class for display thumbnail image at grid listing
+ * @category  Salecto
+ * @package   Salecto_Advertisment
+ * @author    Salecto
+ */
 namespace Salecto\Advertisment\Ui\Component\Listing\Column;
 
 use Magento\Catalog\Helper\Image;
