@@ -39,16 +39,15 @@ Desrcribe each settings from the backend, and what effect they have.
 
 ### Install module
 1. Run `composer require salecto2/magento2-advertisment`
-1. Run `php bin/magento setup:upgrade`
-1. Run `php bin/magento setup:di:compile`
-1. Run `php bin/magento s:s:d da_DK en_US`
-1. Run `php bin/magento c:c`
+2. Run `php bin/magento setup:upgrade`
+3. Run `php bin/magento setup:di:compile`
+4. Run `php bin/magento s:s:d da_DK en_US`
+5. Run `php bin/magento c:c`
 
 ### Uninstall module
-1. Run `php bin/magento module:disable Salecto_Advertisment -c`
-1. Run `php bin/magento module:uninstall Salecto_MaintenanceMode -c`
-1. Run `php bin/magento setup:di:compile`
-1. Run `php bin/magento s:s:d da_DK en_US`
-1. Run `php bin/magento c:c`
+1. Run `composer require salecto2/magento2-advertisment`
+2. Run `php bin/magento setup:di:compile`
+3. Run `php bin/magento s:s:d da_DK en_US`
+4. Run `php bin/magento c:c`
 
 ### Additional developer notes
