@@ -23,6 +23,13 @@ class InactiveAdverts
      */
     protected $_DateTime;
 
+    /**
+     * Constructor
+     *
+     * @param \Salecto\Advertisment\Model\ResourceModel\GridModel\CollectionFactory $collectionFactory
+     * @param \Magento\Framework\Stdlib\DateTime\DateTime $DateTime
+     * @param \Psr\Log\LoggerInterface $logger
+     */
     public function __construct(
     	CollectionFactory $collectionFactory,
         LoggerInterface $logger,
@@ -34,6 +41,10 @@ class InactiveAdverts
         $this->_DateTime = $DateTime;
     }
 
+    /**
+     * Retrieve collection of 'advertisments', loop collection condition, item which  * are not within date range and set status to 1 (inactive). 
+     * @return null
+     */
 	public function execute()
 	{
 		$currentTime = $this->_DateTime->date();
