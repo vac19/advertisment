@@ -156,6 +156,15 @@
                </item>
            </argument>
         </column>
+        <column name="custom" 
+                class="Salecto\Advertisment\Ui\Component\Listing\Column\AdCondition">
+           <argument name="data" xsi:type="array">
+               <item name="config" xsi:type="array">
+                   <item name="filter" xsi:type="string">text</item>
+                   <item name="label" xsi:type="string" translate="true">custom</item>
+               </item>
+           </argument>
+        </column>
         <column name="ad_img" class="Salecto\Advertisment\Ui\Component\Listing\Column\Thumbnail">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
